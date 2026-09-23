@@ -63,3 +63,13 @@ class GameInterface:
         print("You passed your turn")
     def enemy_pass_turn_sequence():
         print("The enemy passed his turn")
+        
+    def hp_verification(playerhp, enemyhp):
+        if playerhp <= 0:
+            print("You lost the fight")
+            return False
+        elif enemyhp <= 0:
+            print("You won the fight")
+            return False
+        else:
+            return True

@@ -27,25 +27,33 @@ while(True):
             player.hp = interface.enemy_fight_sequence(enemy.attack, player.hp, player.defense)
             print(f"Your HP: {player.hp}")
             print(f"Enemy HP: {enemy.hp}")
+            if not interface.hp_verification(player.hp, enemy.hp):
+                break
         elif (choose == "2"):
             player.heal(random.randint(10, 30))
             print(f"Your HP: {player.hp}")
             player.hp = interface.enemy_fight_sequence(enemy.attack, player.hp, player.defense)
             print(f"Your HP: {player.hp}")
+            if not interface.hp_verification(player.hp, enemy.hp):
+                break
         elif (choose == "3"):
             enemy.attack = interface.shield_sequence(enemy.attack, player.defense)
             player.hp = interface.enemy_fight_sequence(enemy.attack, player.hp, player.defense)
             print(f"Your HP: {player.hp}")
             player.defense = player.defense - random.randint(5, 15)
             print(f"Your Defense: {player.defense}")
+            if not interface.hp_verification(player.hp, enemy.hp):
+                break
         elif (choose == "4"):
             player.attack = interface.boost_sequence(random.randint(5, 15), player.attack, enemy.hp)
             player.hp = interface.enemy_fight_sequence(enemy.attack, player.hp, player.defense)
             print(f"Your HP: {player.hp}")
+            if not interface.hp_verification(player.hp, enemy.hp):
+                break
         elif (choose == "5"):
             player.pass_turn()
             player.hp = interface.enemy_fight_sequence(enemy.attack, player.hp, player.defense)
             print(f"Your HP: {player.hp}")
-        elif (choose == "6"):
-            player.escape()
-            break
+            if not interface.hp_verification(player.hp, enemy.hp):
+                break
+        
