@@ -25,4 +25,5 @@ class GameInterface:
         print("2. View classment")
         print("3. Options")
         print("4. Quit the game")
+        print("")
         print("########################################################")

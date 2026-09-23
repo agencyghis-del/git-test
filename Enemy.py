@@ -21,4 +21,9 @@ class Enemy:
     def super_strike(self, boost:int):
         self.attack += boost
         return self.attack
-        
+    def pass_turn(self):
+        return "You passed your turn"
+    def escape(self):
+        return "You escaped the fight"
+    def get_stats(self):
+        return f"Name: {self.name}\nAttack: {self.attack}\nDefense: {self.defense}\nHP: {self.hp}\nMana: {self.mana}"
